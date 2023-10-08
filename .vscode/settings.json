@@ -1,0 +1,6 @@
+{
+    "rust-analyzer.linkedProjects": [
+        "./examples/simple/ext/simple/Cargo.toml",
+        "./crates/lucchetto-macros/Cargo.toml"
+    ]
+}
