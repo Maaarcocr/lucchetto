@@ -4,6 +4,16 @@ easily call a rust function without holding the GVL lock
 
 lucchetto = lock in italian
 
+## Safety concerns
+
+Passing any magnus struct like `Value`, `RString`, `RArray` is not safe, because the ruby VM can run while you are using them. This means that you can't use them in a `without_gvl` function, as they may be modified or
+worse garbage collected while you are using them.
+
+Just pass primitive types like `i32`, `String`, `Vec`, etc. and you'll be fine.
+
+I'll try to figure out how to make this more safe in the future, but for now this is the only way to do it.
+
+
 ## Why?
 
 let's say that you have written a rust function that is called from ruby, using
@@ -98,12 +108,3 @@ main thread
 ```
 
 as you can see, the main thread is not blocked anymore, and the rust function is still running in the background.
-
-## Safety concerns
-
-Passing any magnus struct like `Value`, `RString`, `RArray` is not safe, because the ruby VM can run while you are using them. This means that you can't use them in a `without_gvl` function, as they may be modified or
-worse garbage collected while you are using them.
-
-Just pass primitive types like `i32`, `String`, `Vec`, etc. and you'll be fine.
-
-I'll try to figure out how to make this more safe in the future, but for now this is the only way to do it.
