@@ -108,3 +108,7 @@ main thread
 ```
 
 as you can see, the main thread is not blocked anymore, and the rust function is still running in the background.
+
+## Is this good code?
+
+Honestly? I don't know. It may contain memory bugs (I've had to do lots of pointer-y things to make this work), and it may be unsafe. I have not spent a lot of time on this, so I'm not sure if this is the best way to do this. But does it seem to work? Yes.
