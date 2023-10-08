@@ -9,7 +9,7 @@ lucchetto = lock in italian
 let's say that you have written a rust function that is called from ruby, using
 [magnus](https://github.com/matsadler/magnus) and [rb-sys](https://github.com/oxidize-rb/rb-sys).
 
-as an example let's take this simple function (for our simple example):
+as an example let's take this simple function (from our simple example):
 
 ```rust
 use magnus::{define_global_function, function};
