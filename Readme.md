@@ -4,6 +4,21 @@ easily call a rust function without holding the GVL lock
 
 lucchetto = lock in italian
 
+## How to install
+
+add this to your `Cargo.toml`:
+
+```toml
+[dependencies]
+lucchetto = "0.1.0"
+```
+
+or
+
+```bash
+cargo add lucchetto
+```
+
 ## Safety concerns
 
 Passing any magnus struct like `Value`, `RString`, `RArray` is not safe, because the ruby VM can run while you are using them. This means that you can't use them in a `without_gvl` function, as they may be modified or
