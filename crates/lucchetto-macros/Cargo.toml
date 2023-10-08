@@ -2,6 +2,10 @@
 name = "lucchetto-macros"
 version = "0.1.0"
 edition = "2021"
+description = "macros crate for lucchetto"
+license-file = "../../LICENSE"
+homepage = "https://github.com/Maaarcocr/lucchetto"
+repository = "https://github.com/Maaarcocr/lucchetto"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

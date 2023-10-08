@@ -2,18 +2,23 @@
 name = "lucchetto"
 version = "0.1.0"
 edition = "2021"
+description = "easily call a rust function without holding the GVL lock"
+license-file = "./LICENSE"
+homepage = "https://github.com/Maaarcocr/lucchetto"
+repository = "https://github.com/Maaarcocr/lucchetto"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 paste = "1.0.14"
-lucchetto-macros = { path = "crates/lucchetto-macros" }
-rb-sys = "*"
+rb-sys = "0"
+lucchetto-macros = { path = "crates/lucchetto-macros", version = "0.1.0" }
 
 [workspace]
 members = [
     "crates/lucchetto-macros",
 ]
+
 exclude = [
     "examples/simple/ext/simple"
 ]
