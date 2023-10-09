@@ -10,7 +10,7 @@ add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-lucchetto = "0.1.0"
+lucchetto = "0.2.0"
 ```
 
 or

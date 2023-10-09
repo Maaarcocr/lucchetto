@@ -1,6 +1,6 @@
 [package]
 name = "lucchetto"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 description = "easily call a rust function without holding the GVL lock"
 license-file = "./LICENSE"
@@ -10,7 +10,7 @@ repository = "https://github.com/Maaarcocr/lucchetto"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-lucchetto-macros = { path = "crates/lucchetto-macros", version = "0.1.0" }
+lucchetto-macros = { path = "crates/lucchetto-macros", version = "0.2.0" }
 paste = "1.0.14"
 rb-sys = "0"
 static_assertions = "1.1.0"
