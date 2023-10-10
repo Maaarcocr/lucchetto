@@ -47,7 +47,7 @@ macro_rules! call_without_gvl {
 
                         let ( $([<__ $arg _name>],)+ result_output) = data.read();
                         let result = $func( $( [<__ $arg _name>], )+);
-                        std::ptr::write_volatile(result_output, result);
+                        std::ptr::write(result_output, result);
                         std::ptr::null_mut()
                     }
 
