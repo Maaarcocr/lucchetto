@@ -1,6 +1,6 @@
 [package]
 name = "lucchetto"
-version = "0.2.0"
+version = "0.3.0"
 edition = "2021"
 description = "easily call a rust function without holding the GVL lock"
 license-file = "./LICENSE"
